@@ -36,11 +36,11 @@ export default function Page() {
               variant="subtitle2"
             >
               <ArrowLeftIcon fontSize="var(--icon-fontSize-md)" />
-              Products
+              Categorias
             </Link>
           </div>
           <div>
-            <Typography variant="h4">Edit product</Typography>
+            <Typography variant="h4">Editar Categorias</Typography>
           </div>
         </Stack>
         <ProductEditForm

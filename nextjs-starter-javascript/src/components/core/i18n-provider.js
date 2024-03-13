@@ -7,7 +7,7 @@ import { logger } from '@/lib/default-logger';
 
 import '@/lib/i18n';
 
-export function I18nProvider({ children, language = 'en' }) {
+export function I18nProvider({ children, language = 'es' }) {
   const { i18n } = useTranslation();
 
   React.useEffect(() => {

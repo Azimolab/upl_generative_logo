@@ -4,7 +4,7 @@ import * as React from 'react';
 import RouterLink from 'next/link';
 import { useRouter } from 'next/navigation';
 import { zodResolver } from '@hookform/resolvers/zod';
-import Box from '@mui/material/Box';
+// import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';
 import Card from '@mui/material/Card';
 import CardActions from '@mui/material/CardActions';
@@ -24,9 +24,9 @@ import { z as zod } from 'zod';
 import { paths } from '@/paths';
 import { logger } from '@/lib/default-logger';
 import { Option } from '@/components/core/option';
-import { TextEditor } from '@/components/core/text-editor/text-editor';
+// import { TextEditor } from '@/components/core/text-editor/text-editor';
 import { toast } from '@/components/core/toaster';
-
+  
 const schema = zod.object({
   name: zod.string().min(1, 'Name is required').max(255),
   handle: zod.string().max(255).optional(),
@@ -74,7 +74,7 @@ export function ProductCreateForm() {
         <CardContent>
           <Stack divider={<Divider />} spacing={4}>
             <Stack spacing={3}>
-              <Typography variant="h6">Basic information</Typography>
+              <Typography variant="h6">Informações básicas</Typography>
               <Grid container spacing={3}>
                 <Grid md={6} xs={12}>
                   <Controller
@@ -82,7 +82,7 @@ export function ProductCreateForm() {
                     name="name"
                     render={({ field }) => (
                       <FormControl error={Boolean(errors.name)} fullWidth>
-                        <InputLabel required>Product name</InputLabel>
+                        <InputLabel required>Nome da categoria</InputLabel>
                         <OutlinedInput {...field} />
                         {errors.name ? <FormHelperText>{errors.name.message}</FormHelperText> : null}
                       </FormControl>
@@ -95,7 +95,7 @@ export function ProductCreateForm() {
                     name="handle"
                     render={({ field }) => (
                       <FormControl error={Boolean(errors.handle)} fullWidth>
-                        <InputLabel>Handle</InputLabel>
+                        <InputLabel>Nome do produto</InputLabel>
                         <OutlinedInput {...field} />
                         {errors.handle ? <FormHelperText>{errors.handle.message}</FormHelperText> : null}
                       </FormControl>
@@ -108,7 +108,7 @@ export function ProductCreateForm() {
                     name="category"
                     render={({ field }) => (
                       <FormControl error={Boolean(errors.category)} fullWidth>
-                        <InputLabel>Category</InputLabel>
+                        <InputLabel>Cor Primária</InputLabel>
                         <Select {...field}>
                           <Option value="">Select a category</Option>
                           <Option value="Healthcare">Healthcare</Option>
@@ -126,7 +126,7 @@ export function ProductCreateForm() {
                     name="type"
                     render={({ field }) => (
                       <FormControl error={Boolean(errors.type)} fullWidth>
-                        <InputLabel>Type</InputLabel>
+                        <InputLabel>Cor secundária</InputLabel>
                         <Select {...field}>
                           <Option value="physical">Physical</Option>
                           <Option value="digital">Digital</Option>
@@ -137,7 +137,7 @@ export function ProductCreateForm() {
                     )}
                   />
                 </Grid>
-                <Grid xs={12}>
+                {/* <Grid xs={12}>
                   <Controller
                     control={control}
                     name="description"
@@ -159,34 +159,17 @@ export function ProductCreateForm() {
                       </FormControl>
                     )}
                   />
-                </Grid>
-                <Grid xs={12}>
-                  <Controller
-                    control={control}
-                    name="tags"
-                    render={({ field }) => (
-                      <FormControl error={Boolean(errors.name)} fullWidth>
-                        <InputLabel>Tags</InputLabel>
-                        <OutlinedInput {...field} placeholder="e.g Modern, Clean, etc" />
-                        {errors.name ? (
-                          <FormHelperText>{errors.name.message}</FormHelperText>
-                        ) : (
-                          <FormHelperText>Tags must be separated by comma</FormHelperText>
-                        )}
-                      </FormControl>
-                    )}
-                  />
-                </Grid>
+                </Grid> */}
               </Grid>
             </Stack>
           </Stack>
         </CardContent>
         <CardActions sx={{ justifyContent: 'flex-end' }}>
           <Button color="secondary" component={RouterLink} href={paths.dashboard.products.list}>
-            Cancel
+            Cancelar
           </Button>
           <Button type="submit" variant="contained">
-            Create product
+            Salvar
           </Button>
         </CardActions>
       </Card>

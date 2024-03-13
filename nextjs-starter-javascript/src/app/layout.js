@@ -30,7 +30,7 @@ export default async function Layout({ children }) {
           <LocalizationProvider>
             <UserProvider>
               <SettingsProvider settings={settings}>
-                <I18nProvider language="en">
+                <I18nProvider language="es">    
                   <ThemeProvider>
                     {children}
                     <SettingsButton />

@@ -61,7 +61,7 @@ const columns = [
   },
 ];
 
-export function Payments({ ordersValue, payments = [], refundsValue, totalOrders }) {
+export function Payments({payments = []}) {
   return (
     <Card>
       <CardHeader
