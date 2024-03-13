@@ -30,7 +30,11 @@ const contacts = [
     status: 'away',
     lastActivity: dayjs().subtract(15, 'minute').toDate(),
   },
-  { id: 'USR-005', name: 'Fran Perez', avatar: '/assets/avatar-5.png', status: 'busy', lastActivity: dayjs().toDate() },
+  { id: 'USR-005', 
+    name: 'Fran Perez', 
+    avatar: '/assets/avatar-5.png', 
+    status: 'busy', 
+    lastActivity: dayjs().toDate() },
   {
     id: 'USR-006',
     name: 'Iulia Albu',

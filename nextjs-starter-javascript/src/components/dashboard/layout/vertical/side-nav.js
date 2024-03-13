@@ -15,7 +15,6 @@ import { useSettings } from '@/hooks/use-settings';
 import { Logo } from '@/components/core/logo';
 
 import { icons } from '../nav-icons';
-import { WorkspacesSwitch } from '../workspaces-switch';
 import { navColorStyles } from './styles';
 
 const logoColors = {
@@ -56,7 +55,6 @@ export function SideNav({ color = 'evident', items = [] }) {
             <Logo color={logoColor} height={32} width={122} />
           </Box>
         </div>
-        <WorkspacesSwitch />
       </Stack>
       <Box
         component="nav"

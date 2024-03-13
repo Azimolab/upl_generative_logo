@@ -5,8 +5,8 @@ export function applyDefaultSettings(settings) {
     colorScheme: config.site.colorScheme,
     primaryColor: config.site.primaryColor,
     direction: 'ltr',
-    navColor: 'evident',
-    layout: 'vertical',
+    navColor: 'discrete',
+    layout: 'horizontal',
     ...settings,
   };
 }

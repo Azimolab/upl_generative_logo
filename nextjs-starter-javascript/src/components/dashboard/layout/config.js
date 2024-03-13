@@ -25,22 +25,22 @@ export const layoutConfig = {
         // },
         {
           key: 'customers',
-          title: 'Customers',
+          title: 'Usuários',
           icon: 'users',
           items: [
-            { key: 'customers', title: 'List customers', href: paths.dashboard.customers.list },
-            { key: 'customers:create', title: 'Create customer', href: paths.dashboard.customers.create },
-            { key: 'customers:details', title: 'Customer details', href: paths.dashboard.customers.details('1') },
+            { key: 'customers', title: 'Lista de usuários', href: paths.dashboard.customers.list },
+            { key: 'customers:create', title: 'Criar usuário', href: paths.dashboard.customers.create },
+            // { key: 'customers:details', title: 'Detalhes do usuário', href: paths.dashboard.customers.details('1') },
           ],
         },
         {
           key: 'products',
-          title: 'Products',
+          title: 'Categorias',
           icon: 'shopping-bag-open',
           items: [
-            { key: 'products', title: 'List products', href: paths.dashboard.products.list },
-            { key: 'products:create', title: 'Create product', href: paths.dashboard.products.create },
-            { key: 'products:details', title: 'Product details', href: paths.dashboard.products.details('1') },
+            { key: 'products', title: 'Lista de categorias', href: paths.dashboard.products.list },
+            { key: 'products:create', title: 'Criar categoria', href: paths.dashboard.products.create },
+            // { key: 'products:details', title: 'Detalhes da categoria', href: paths.dashboard.products.details('1') },
           ],
         },
         // {

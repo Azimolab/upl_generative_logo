@@ -4,11 +4,11 @@ import { LogLevel } from '@/lib/logger';
 
 export const config = {
   site: {
-    name: 'Devias Kit Pro',
+    name: 'UPL - Generative Logo',
     description: '',
     colorScheme: 'light',
-    themeColor: '#090a0b',
-    primaryColor: 'neonBlue',
+    themeColor: '#202427',
+    primaryColor: 'tomatoOrange',
     url: getSiteURL(),
     version: process.env.NEXT_PUBLIC_SITE_VERSION || '0.0.0',
   },
