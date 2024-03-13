@@ -9,7 +9,7 @@ import ListItemIcon from '@mui/material/ListItemIcon';
 import MenuItem from '@mui/material/MenuItem';
 import Popover from '@mui/material/Popover';
 import Typography from '@mui/material/Typography';
-// import { LockKey as LockKeyIcon } from '@phosphor-icons/react/dist/ssr/LockKey';
+import { LockKey as LockKeyIcon } from '@phosphor-icons/react/dist/ssr/LockKey';
 import { User as UserIcon } from '@phosphor-icons/react/dist/ssr/User';
 
 import { config } from '@/config';
@@ -49,12 +49,12 @@ export function UserPopover({ anchorEl, onClose, open }) {
           </ListItemIcon>
           Perfil
         </MenuItem>
-        {/* <MenuItem component={RouterLink} href={paths.dashboard.settings.security} onClick={onClose}>
+        <MenuItem component={RouterLink} href={paths.dashboard.settings.security} onClick={onClose}>
           <ListItemIcon>
             <LockKeyIcon />
           </ListItemIcon>
           Segurança
-        </MenuItem> */}
+        </MenuItem>
       </List>
       <Divider />
       <Box sx={{ p: 1 }}>{config.auth.strategy === AuthStrategy.CUSTOM ? <CustomSignOut /> : null}</Box>

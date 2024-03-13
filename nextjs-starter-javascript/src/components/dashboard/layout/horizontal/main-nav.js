@@ -210,12 +210,12 @@ function NotificationsButton() {
 //   );
 // }
 
-const user = {
-  id: 'USR-000',
-  name: 'Sofia Rivers',
-  avatar: '/assets/avatar.png',
-  email: 'sofia@devias.io',
-};
+// const user = {
+//   id: 'USR-000',
+//   name: 'Sofia Rivers',
+//   avatar: '/assets/avatar.png',
+//   email: 'sofia@devias.io',
+// };
 
 function UserButton() {
   const popover = usePopover();

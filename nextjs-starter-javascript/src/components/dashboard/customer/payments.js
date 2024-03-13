@@ -3,17 +3,17 @@
 import * as React from 'react';
 import Avatar from '@mui/material/Avatar';
 import Box from '@mui/material/Box';
-import Button from '@mui/material/Button';
+// import Button from '@mui/material/Button';
 import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
 import CardHeader from '@mui/material/CardHeader';
 import Chip from '@mui/material/Chip';
-import Divider from '@mui/material/Divider';
+// import Divider from '@mui/material/Divider';
 import Link from '@mui/material/Link';
 import Stack from '@mui/material/Stack';
 import Typography from '@mui/material/Typography';
-import { Plus as PlusIcon } from '@phosphor-icons/react/dist/ssr/Plus';
-import { ShoppingCartSimple as ShoppingCartSimpleIcon } from '@phosphor-icons/react/dist/ssr/ShoppingCartSimple';
+// import { Plus as PlusIcon } from '@phosphor-icons/react/dist/ssr/Plus';
+import { ListChecks as ListChecksIcon } from '@phosphor-icons/react/dist/ssr/ListChecks';
 
 import { dayjs } from '@/lib/dayjs';
 import { DataTable } from '@/components/core/data-table';
@@ -65,51 +65,15 @@ export function Payments({ ordersValue, payments = [], refundsValue, totalOrders
   return (
     <Card>
       <CardHeader
-        action={
-          <Button color="secondary" startIcon={<PlusIcon />}>
-            Create Payment
-          </Button>
-        }
         avatar={
           <Avatar>
-            <ShoppingCartSimpleIcon fontSize="var(--Icon-fontSize)" />
+            <ListChecksIcon fontSize="var(--Icon-fontSize)" />
           </Avatar>
         }
-        title="Payments"
+        title="Histórico"
       />
       <CardContent>
         <Stack spacing={3}>
-          <Card sx={{ borderRadius: 1 }} variant="outlined">
-            <Stack
-              direction="row"
-              divider={<Divider flexItem orientation="vertical" />}
-              spacing={3}
-              sx={{ justifyContent: 'space-between', p: 2 }}
-            >
-              <div>
-                <Typography color="text.secondary" variant="overline">
-                  Total orders
-                </Typography>
-                <Typography variant="h6">{new Intl.NumberFormat('en-US').format(totalOrders)}</Typography>
-              </div>
-              <div>
-                <Typography color="text.secondary" variant="overline">
-                  Orders value
-                </Typography>
-                <Typography variant="h6">
-                  {new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD' }).format(ordersValue)}
-                </Typography>
-              </div>
-              <div>
-                <Typography color="text.secondary" variant="overline">
-                  Refunds
-                </Typography>
-                <Typography variant="h6">
-                  {new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD' }).format(refundsValue)}
-                </Typography>
-              </div>
-            </Stack>
-          </Card>
           <Card sx={{ borderRadius: 1 }} variant="outlined">
             <Box sx={{ overflowX: 'auto' }}>
               <DataTable columns={columns} rows={payments} />

@@ -125,7 +125,7 @@ export function CustomersFilters({ filters = {}, sortDir = 'desc' }) {
           />
           <FilterButton
             displayValue={phone}
-            label="Phone number"
+            label="Empresa"
             onFilterApply={(value) => {
               handlePhoneChange(value);
             }}
@@ -147,9 +147,9 @@ export function CustomersFilters({ filters = {}, sortDir = 'desc' }) {
             </Button>
           </Stack>
         ) : null}
-        <Select name="sort" onChange={handleSortChange} sx={{ maxWidth: '100%', width: '120px' }} value={sortDir}>
-          <Option value="desc">Mais novo</Option>
-          <Option value="asc">Mais velho</Option>
+        <Select name="sort" onChange={handleSortChange} sx={{ maxWidth: '100%', width: '150px' }} value={sortDir}>
+          <Option value="desc">Mais recentes</Option>
+          <Option value="asc">Mais antigos </Option>
         </Select>
       </Stack>
     </div>

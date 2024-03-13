@@ -6,13 +6,14 @@ import Avatar from '@mui/material/Avatar';
 import Box from '@mui/material/Box';
 import Chip from '@mui/material/Chip';
 import IconButton from '@mui/material/IconButton';
-import LinearProgress from '@mui/material/LinearProgress';
+import CancelIcon from '@mui/icons-material/Cancel';
+
 import Link from '@mui/material/Link';
 import Stack from '@mui/material/Stack';
 import Typography from '@mui/material/Typography';
 import { CheckCircle as CheckCircleIcon } from '@phosphor-icons/react/dist/ssr/CheckCircle';
 import { Clock as ClockIcon } from '@phosphor-icons/react/dist/ssr/Clock';
-import { Minus as MinusIcon } from '@phosphor-icons/react/dist/ssr/Minus';
+// import { Minus as MinusIcon } from '@phosphor-icons/react/dist/ssr/Minus';
 import { PencilSimple as PencilSimpleIcon } from '@phosphor-icons/react/dist/ssr/PencilSimple';
 
 import { paths } from '@/paths';
@@ -42,35 +43,24 @@ const columns = [
         </div>
       </Stack>
     ),
-    name: 'Name',
+    name: 'Usuário',
     width: '250px',
   },
-  {
-    formatter: (row) => (
-      <Stack direction="row" spacing={2} sx={{ alignItems: 'center' }}>
-        <LinearProgress sx={{ flex: '1 1 auto' }} value={row.quota} variant="determinate" />
-        <Typography color="text.secondary" variant="body2">
-          {new Intl.NumberFormat('en-US', { style: 'percent', maximumFractionDigits: 2 }).format(row.quota / 100)}
-        </Typography>
-      </Stack>
-    ),
-    name: 'Quota',
-    width: '250px',
-  },
-  { field: 'phone', name: 'Phone number', width: '150px' },
+  { field: 'company', name: 'Empresa', width: '150px' },
   {
     formatter(row) {
       return dayjs(row.createdAt).format('MMM D, YYYY h:mm A');
     },
-    name: 'Created at',
+    name: 'Data de criação',
     width: '200px',
   },
   {
     formatter: (row) => {
       const mapping = {
-        active: { label: 'Active', icon: <CheckCircleIcon color="var(--mui-palette-success-main)" weight="fill" /> },
-        blocked: { label: 'Blocked', icon: <MinusIcon color="var(--mui-palette-error-main)" /> },
-        pending: { label: 'Pending', icon: <ClockIcon color="var(--mui-palette-warning-main)" weight="fill" /> },
+        active: { label: 'Autorizado', icon: <CheckCircleIcon color="var(--mui-palette-success-main)" weight="fill" /> },
+        // blocked: { label: 'Bloqueado', icon: <MinusIcon color="var(--mui-palette-error-main)" /> },
+        blocked: { label: 'Bloqueado', icon: <CancelIcon color="var(--mui-palette-error-main)" /> },
+        pending: { label: 'Pendente', icon: <ClockIcon color="var(--mui-palette-warning-main)" weight="fill" /> },
       };
       const { label, icon } = mapping[row.status] ?? { label: 'Unknown', icon: null };
 
@@ -85,8 +75,8 @@ const columns = [
         <PencilSimpleIcon />
       </IconButton>
     ),
-    name: 'Actions',
-    hideName: true,
+    name: 'Ações',
+    hideName: false,
     width: '100px',
     align: 'right',
   },
