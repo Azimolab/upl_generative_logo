@@ -9,6 +9,7 @@ import Box from '@mui/material/Box';
 import Chip from '@mui/material/Chip';
 import Divider from '@mui/material/Divider';
 import IconButton from '@mui/material/IconButton';
+import PersonIcon from '@mui/icons-material/Person';
 import Stack from '@mui/material/Stack';
 import Tooltip from '@mui/material/Tooltip';
 import Typography from '@mui/material/Typography';
@@ -17,23 +18,23 @@ import { Bell as BellIcon } from '@phosphor-icons/react/dist/ssr/Bell';
 import { CaretDown as CaretDownIcon } from '@phosphor-icons/react/dist/ssr/CaretDown';
 import { CaretRight as CaretRightIcon } from '@phosphor-icons/react/dist/ssr/CaretRight';
 import { List as ListIcon } from '@phosphor-icons/react/dist/ssr/List';
-import { MagnifyingGlass as MagnifyingGlassIcon } from '@phosphor-icons/react/dist/ssr/MagnifyingGlass';
-import { Users as UsersIcon } from '@phosphor-icons/react/dist/ssr/Users';
-import { useTranslation } from 'next-i18next';
+// import { MagnifyingGlass as MagnifyingGlassIcon } from '@phosphor-icons/react/dist/ssr/MagnifyingGlass';
+// import { Users as UsersIcon } from '@phosphor-icons/react/dist/ssr/Users';
+// import { useTranslation } from 'next-i18next';
 
 import { paths } from '@/paths';
 import { isNavItemActive } from '@/lib/is-nav-item-active';
-import { useDialog } from '@/hooks/use-dialog';
+// import { useDialog } from '@/hooks/use-dialog';
 import { usePopover } from '@/hooks/use-popover';
 import { useSettings } from '@/hooks/use-settings';
 import { Dropdown } from '@/components/core/dropdown/dropdown';
 import { DropdownPopover } from '@/components/core/dropdown/dropdown-popover';
 import { DropdownTrigger } from '@/components/core/dropdown/dropdown-trigger';
 import { Logo } from '@/components/core/logo';
-import { SearchDialog } from '@/components/dashboard/layout/search-dialog';
+// import { SearchDialog } from '@/components/dashboard/layout/search-dialog';
 
-import { ContactsPopover } from '../contacts-popover';
-import { languageFlags, LanguagePopover } from '../language-popover';
+// import { ContactsPopover } from '../contacts-popover';
+// import { languageFlags, LanguagePopover } from '../language-popover';
 import { MobileNav } from '../mobile-nav';
 import { icons } from '../nav-icons';
 import { NotificationsPopover } from '../notifications-popover';
@@ -99,15 +100,15 @@ export function MainNav({ color = 'evident', items = [] }) {
             spacing={2}
             sx={{ alignItems: 'center', flex: '1 1 auto', justifyContent: 'flex-end' }}
           >
-            <SearchButton />
+            {/* <SearchButton /> */}
             <NotificationsButton />
-            <ContactsButton />
+            {/* <ContactsButton /> */}
             <Divider
               flexItem
               orientation="vertical"
               sx={{ borderColor: 'var(--MainNav-divider)', display: { xs: 'none', md: 'block' } }}
             />
-            <LanguageSwitch />
+            {/* <LanguageSwitch /> */}
             <UserButton />
           </Stack>
         </Box>
@@ -134,20 +135,20 @@ export function MainNav({ color = 'evident', items = [] }) {
   );
 }
 
-function SearchButton() {
-  const dialog = useDialog();
+// function SearchButton() {
+//   const dialog = useDialog();
 
-  return (
-    <React.Fragment>
-      <Tooltip title="Search">
-        <IconButton onClick={dialog.handleOpen} sx={{ display: { xs: 'none', md: 'inline-flex' } }}>
-          <MagnifyingGlassIcon color="var(--NavItem-icon-color)" />
-        </IconButton>
-      </Tooltip>
-      <SearchDialog onClose={dialog.handleClose} open={dialog.open} />
-    </React.Fragment>
-  );
-}
+//   return (
+//     <React.Fragment>
+//       <Tooltip title="Search">
+//         <IconButton onClick={dialog.handleOpen} sx={{ display: { xs: 'none', md: 'inline-flex' } }}>
+//           <MagnifyingGlassIcon color="var(--NavItem-icon-color)" />
+//         </IconButton>
+//       </Tooltip>
+//       <SearchDialog onClose={dialog.handleClose} open={dialog.open} />
+//     </React.Fragment>
+//   );
+// }
 
 function NotificationsButton() {
   const popover = usePopover();
@@ -170,44 +171,44 @@ function NotificationsButton() {
   );
 }
 
-function ContactsButton() {
-  const popover = usePopover();
+// function ContactsButton() {
+//   const popover = usePopover();
 
-  return (
-    <React.Fragment>
-      <Tooltip title="Contacts">
-        <IconButton onClick={popover.handleOpen} ref={popover.anchorRef}>
-          <UsersIcon color="var(--NavItem-icon-color)" />
-        </IconButton>
-      </Tooltip>
-      <ContactsPopover anchorEl={popover.anchorRef.current} onClose={popover.handleClose} open={popover.open} />
-    </React.Fragment>
-  );
-}
+//   return (
+//     <React.Fragment>
+//       <Tooltip title="Contacts">
+//         <IconButton onClick={popover.handleOpen} ref={popover.anchorRef}>
+//           <UsersIcon color="var(--NavItem-icon-color)" />
+//         </IconButton>
+//       </Tooltip>
+//       <ContactsPopover anchorEl={popover.anchorRef.current} onClose={popover.handleClose} open={popover.open} />
+//     </React.Fragment>
+//   );
+// }
 
-function LanguageSwitch() {
-  const { i18n } = useTranslation();
-  const popover = usePopover();
-  const language = i18n.language || 'en';
-  const flag = languageFlags[language];
+// function LanguageSwitch() {
+//   const { i18n } = useTranslation();
+//   const popover = usePopover();
+//   const language = i18n.language || 'en';
+//   const flag = languageFlags[language];
 
-  return (
-    <React.Fragment>
-      <Tooltip title="Language">
-        <IconButton
-          onClick={popover.handleOpen}
-          ref={popover.anchorRef}
-          sx={{ display: { xs: 'none', md: 'inline-flex' } }}
-        >
-          <Box sx={{ height: '24px', width: '24px' }}>
-            <Box alt={language} component="img" src={flag} sx={{ height: 'auto', width: '100%' }} />
-          </Box>
-        </IconButton>
-      </Tooltip>
-      <LanguagePopover anchorEl={popover.anchorRef.current} onClose={popover.handleClose} open={popover.open} />
-    </React.Fragment>
-  );
-}
+//   return (
+//     <React.Fragment>
+//       <Tooltip title="Language">
+//         <IconButton
+//           onClick={popover.handleOpen}
+//           ref={popover.anchorRef}
+//           sx={{ display: { xs: 'none', md: 'inline-flex' } }}
+//         >
+//           <Box sx={{ height: '24px', width: '24px' }}>
+//             <Box alt={language} component="img" src={flag} sx={{ height: 'auto', width: '100%' }} />
+//           </Box>
+//         </IconButton>
+//       </Tooltip>
+//       <LanguagePopover anchorEl={popover.anchorRef.current} onClose={popover.handleClose} open={popover.open} />
+//     </React.Fragment>
+//   );
+// }
 
 const user = {
   id: 'USR-000',
@@ -227,7 +228,7 @@ function UserButton() {
         ref={popover.anchorRef}
         sx={{ border: 'none', background: 'transparent', cursor: 'pointer', p: 0 }}
       >
-        <Badge
+        {/* <Badge
           anchorOrigin={{ horizontal: 'right', vertical: 'bottom' }}
           color="success"
           sx={{
@@ -241,9 +242,11 @@ function UserButton() {
             },
           }}
           variant="dot"
-        >
-          <Avatar src={user.avatar} />
-        </Badge>
+        > */}
+          <Avatar>
+            <PersonIcon />
+          </Avatar>
+        {/* </Badge> */}
       </Box>
       <UserPopover anchorEl={popover.anchorRef.current} onClose={popover.handleClose} open={popover.open} />
     </React.Fragment>
