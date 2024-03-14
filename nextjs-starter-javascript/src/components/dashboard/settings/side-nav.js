@@ -29,7 +29,7 @@ const navItems = [
       { key: 'security', title: 'Segurança', href: paths.dashboard.settings.security, icon: 'lock-key' },
     ],
   },
-  ];
+];
 
 const icons = {
   'credit-card': CreditCardIcon,

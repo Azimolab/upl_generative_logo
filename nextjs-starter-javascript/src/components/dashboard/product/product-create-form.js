@@ -74,7 +74,7 @@ export function ProductCreateForm() {
         <CardContent>
           <Stack divider={<Divider />} spacing={4}>
             <Stack spacing={3}>
-              <Typography variant="h6">Informações básicas</Typography>
+              <Typography variant="h6">Informações da categoria</Typography>
               <Grid container spacing={3}>
                 <Grid xs>
                   <Controller
@@ -89,7 +89,7 @@ export function ProductCreateForm() {
                     )}
                   />
                 </Grid>
-                <Grid xs>
+                {/* <Grid xs>
                   <Controller
                     control={control}
                     name="handle"
@@ -101,7 +101,7 @@ export function ProductCreateForm() {
                       </FormControl>
                     )}
                   />
-                </Grid>
+                </Grid> */}
                 <Grid xs>
                   <Controller
                     control={control}
@@ -137,9 +137,9 @@ export function ProductCreateForm() {
                     )}
                   />
                 </Grid>
-                <Button type="submit" variant="contained">
+                {/* <Button type="submit" variant="contained">
                   Gerar
-                </Button>
+                </Button> */}
                 {/* <Grid xs={12}>
                   <Controller
                     control={control}
@@ -163,6 +163,76 @@ export function ProductCreateForm() {
                     )}
                   />
                 </Grid> */}
+              </Grid>
+            </Stack>
+            <Stack spacing={3}>
+              <Typography variant="h6">Configurações do exemplo</Typography>
+              <Grid container spacing={3}>
+                <Grid xs>
+                  <Controller
+                    control={control}
+                    name="handle"
+                    render={({ field }) => (
+                      <FormControl error={Boolean(errors.handle)} fullWidth>
+                        <InputLabel>Produto</InputLabel>
+                        <OutlinedInput {...field} />
+                        {errors.handle ? <FormHelperText>{errors.handle.message}</FormHelperText> : null}
+                      </FormControl>
+                    )}
+                  />
+                </Grid>
+                <Grid xs>
+                  <Controller
+                    control={control}
+                    name="group"
+                    render={({ field }) => (
+                      <FormControl error={Boolean(errors.handle)} fullWidth>
+                        <InputLabel>Grupo</InputLabel>
+                        <OutlinedInput {...field} />
+                        {errors.handle ? <FormHelperText>{errors.handle.message}</FormHelperText> : null}
+                      </FormControl>
+                    )}
+                  />
+                </Grid>
+                {/* <Grid xs>
+                  <Controller
+                    control={control}
+                    name="category"
+                    render={({ field }) => (
+                      <FormControl error={Boolean(errors.category)} fullWidth>
+                        <InputLabel>Cor Primária</InputLabel>
+                        <Select {...field}>
+                          <Option value="">Select a category</Option>
+                          <Option value="Healthcare">Healthcare</Option>
+                          <Option value="Makeup">Makeup</Option>
+                          <Option value="Skincare">Skincare</Option>
+                        </Select>
+                        {errors.category ? <FormHelperText error>{errors.category.message}</FormHelperText> : null}
+                      </FormControl>
+                    )}
+                  />
+                </Grid> */}
+                {/* <Grid xs>
+                  <Controller
+                    control={control}
+                    name="type"
+                    render={({ field }) => (
+                      <FormControl error={Boolean(errors.type)} fullWidth>
+                        <InputLabel>Cor secundária</InputLabel>
+                        <Select {...field}>
+                          <Option value="physical">Physical</Option>
+                          <Option value="digital">Digital</Option>
+                          <Option value="service">Service</Option>
+                        </Select>
+                        {errors.type ? <FormHelperText error>{errors.type.message}</FormHelperText> : null}
+                      </FormControl>
+                    )}
+                  />
+                </Grid> */}
+                <Button type="submit" variant="contained">
+                  Gerar forma
+                </Button>
+
               </Grid>
             </Stack>
           </Stack>
