@@ -3,9 +3,8 @@ import Stack from '@mui/material/Stack';
 import Typography from '@mui/material/Typography';
 
 import { config } from '@/config';
-import { dayjs } from '@/lib/dayjs';
-import { LoginHistory } from '@/components/dashboard/settings/login-history';
-import { MultiFactor } from '@/components/dashboard/settings/multi-factor';
+// import { dayjs } from '@/lib/dayjs';
+// import { LoginHistory } from '@/components/dashboard/settings/login-history';
 import { PasswordForm } from '@/components/dashboard/settings/password-form';
 
 export const metadata = { title: `Security | Settings | Dashboard | ${config.site.name}` };
@@ -18,8 +17,9 @@ export default function Page() {
       </div>
       <Stack spacing={4}>
         <PasswordForm />
-        <MultiFactor />
-        <LoginHistory
+
+        {/* ** Rever dayjs() */}
+        {/* <LoginHistory
           events={[
             {
               id: 'EV-002',
@@ -36,7 +36,7 @@ export default function Page() {
               createdAt: dayjs().subtract(1, 'day').subtract(1, 'hour').subtract(25, 'minute').toDate(),
             },
           ]}
-        />
+        /> */}
       </Stack>
     </Stack>
   );

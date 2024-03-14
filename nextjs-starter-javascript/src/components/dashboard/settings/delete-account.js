@@ -17,15 +17,15 @@ export function DeleteAccount() {
             <WarningIcon fontSize="var(--Icon-fontSize)" />
           </Avatar>
         }
-        title="Delete account"
+        title="Excluir conta"
       />
       <CardContent>
         <Stack spacing={3} sx={{ alignItems: 'flex-start' }}>
           <Typography variant="subtitle1">
-            Delete your account and all of your source data. This is irreversible.
+            Excluir sua conta removerá todos os dados salvos. Esse procedimento é irreversível.
           </Typography>
           <Button color="error" variant="outlined">
-            Delete account
+            Excluir conta
           </Button>
         </Stack>
       </CardContent>

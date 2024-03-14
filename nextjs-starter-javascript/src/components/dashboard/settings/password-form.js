@@ -20,26 +20,26 @@ export function PasswordForm() {
             <PasswordIcon fontSize="var(--Icon-fontSize)" />
           </Avatar>
         }
-        title="Change password"
+        title="Alterar senha"
       />
       <CardContent>
         <Stack spacing={3}>
           <Stack spacing={3}>
             <FormControl>
-              <InputLabel>Old password</InputLabel>
+              <InputLabel>Senha antiga</InputLabel>
               <OutlinedInput name="oldPassword" type="password" />
             </FormControl>
             <FormControl>
-              <InputLabel>New password</InputLabel>
+              <InputLabel>Nova senha</InputLabel>
               <OutlinedInput name="password" type="password" />
             </FormControl>
             <FormControl>
-              <InputLabel>Re-type new password</InputLabel>
+              <InputLabel>Reescreva a senha nova</InputLabel>
               <OutlinedInput name="confirmPassword" type="password" />
             </FormControl>
           </Stack>
           <Box sx={{ display: 'flex', justifyContent: 'flex-end' }}>
-            <Button variant="contained">Update</Button>
+            <Button variant="contained">Salvar</Button>
           </Box>
         </Stack>
       </CardContent>

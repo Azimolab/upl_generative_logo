@@ -7,6 +7,7 @@ import Avatar from '@mui/material/Avatar';
 import Box from '@mui/material/Box';
 import Stack from '@mui/material/Stack';
 import Typography from '@mui/material/Typography';
+import PersonIcon from '@mui/icons-material/Person';
 import { Bell as BellIcon } from '@phosphor-icons/react/dist/ssr/Bell';
 import { CreditCard as CreditCardIcon } from '@phosphor-icons/react/dist/ssr/CreditCard';
 import { LockKey as LockKeyIcon } from '@phosphor-icons/react/dist/ssr/LockKey';
@@ -22,28 +23,13 @@ import { isNavItemActive } from '@/lib/is-nav-item-active';
 const navItems = [
   {
     key: 'personal',
-    title: 'Personal',
+    title: 'Configurações',
     items: [
-      { key: 'account', title: 'Account', href: paths.dashboard.settings.account, icon: 'user-circle' },
-      { key: 'notifications', title: 'Notifications', href: paths.dashboard.settings.notifications, icon: 'bell' },
-      { key: 'security', title: 'Security', href: paths.dashboard.settings.security, icon: 'lock-key' },
+      { key: 'account', title: 'Perfil', href: paths.dashboard.settings.account, icon: 'user-circle' },
+      { key: 'security', title: 'Segurança', href: paths.dashboard.settings.security, icon: 'lock-key' },
     ],
   },
-  {
-    key: 'organization',
-    title: 'Organization',
-    items: [
-      { key: 'billing', title: 'Billing & plans', href: paths.dashboard.settings.billing, icon: 'credit-card' },
-      { key: 'team', title: 'Team', href: paths.dashboard.settings.team, icon: 'users-three' },
-      {
-        key: 'integrations',
-        title: 'Integrations',
-        href: paths.dashboard.settings.integrations,
-        icon: 'plugs-connected',
-      },
-    ],
-  },
-];
+  ];
 
 const icons = {
   'credit-card': CreditCardIcon,
@@ -88,7 +74,9 @@ export function SideNav() {
           ))}
         </Stack>
         <Stack direction="row" spacing={2} sx={{ alignItems: 'center' }}>
-          <Avatar src="/assets/avatar.png">AV</Avatar>
+          <Avatar>
+            <PersonIcon />
+          </Avatar>
           <div>
             <Typography variant="subtitle1">Sofia Rivers</Typography>
             <Typography color="text.secondary" variant="caption">

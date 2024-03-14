@@ -43,6 +43,7 @@ export const layoutConfig = {
             // { key: 'products:details', title: 'Detalhes da categoria', href: paths.dashboard.products.details('1') },
           ],
         },
+        { key: 'history', title: 'Histórico', href: paths.dashboard.history.list, icon: 'list-dashes' },
         // {
         //   key: 'orders',
         //   title: 'Orders',
