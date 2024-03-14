@@ -76,7 +76,7 @@ export function ProductCreateForm() {
             <Stack spacing={3}>
               <Typography variant="h6">Informações básicas</Typography>
               <Grid container spacing={3}>
-                <Grid md={6} xs={12}>
+                <Grid xs>
                   <Controller
                     control={control}
                     name="name"
@@ -89,7 +89,7 @@ export function ProductCreateForm() {
                     )}
                   />
                 </Grid>
-                <Grid md={6} xs={12}>
+                <Grid xs>
                   <Controller
                     control={control}
                     name="handle"
@@ -102,7 +102,7 @@ export function ProductCreateForm() {
                     )}
                   />
                 </Grid>
-                <Grid md={6} xs={12}>
+                <Grid xs>
                   <Controller
                     control={control}
                     name="category"
@@ -120,7 +120,7 @@ export function ProductCreateForm() {
                     )}
                   />
                 </Grid>
-                <Grid md={6} xs={12}>
+                <Grid xs>
                   <Controller
                     control={control}
                     name="type"
@@ -137,6 +137,9 @@ export function ProductCreateForm() {
                     )}
                   />
                 </Grid>
+                <Button type="submit" variant="contained">
+                  Gerar
+                </Button>
                 {/* <Grid xs={12}>
                   <Controller
                     control={control}

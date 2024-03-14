@@ -33,11 +33,11 @@ export default function Page() {
               variant="subtitle2"
             >
               <ArrowLeftIcon fontSize="var(--icon-fontSize-md)" />
-              Produtos
+              Categorias
             </Link>
           </div>
           <div>
-            <Typography variant="h4">Criar um produto</Typography>
+            <Typography variant="h4">Criar uma categoria</Typography>
           </div>
         </Stack>
         <ProductCreateForm />
