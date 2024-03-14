@@ -67,11 +67,10 @@ const columns = [
         </div>
       </Stack>
     ),
-    name: 'Categoria',
+    name: 'Produto',
     width: '300px',
   },
-  { field: 'primary_color', name: 'Cor primária', width: '150px' },
-  { field: 'secondary_color', name: 'Cor secundária', width: '150px' },
+  { field: 'category', name: 'Categoria', width: '150px' },
   { field: 'quantity', name: 'Data da criação', width: '100px'},
   // {
   //   formatter(row) {
@@ -80,23 +79,23 @@ const columns = [
   //   name: 'Data da criação',
   //   width: '150px',
   // },
-  {
-    formatter: (row) => {
-      const mapping = {
-        draft: { label: 'Draft', icon: <ClockIcon color="var(--mui-palette-secondary-main)" /> },
-        published: {
-          label: 'Published',
-          icon: <CheckCircleIcon color="var(--mui-palette-success-main)" weight="fill" />,
-        },
-      };
-      const { label, icon } = mapping[row.status] ?? { label: 'Unknown', icon: null };
+  // {
+  //   formatter: (row) => {
+  //     const mapping = {
+  //       draft: { label: 'Draft', icon: <ClockIcon color="var(--mui-palette-secondary-main)" /> },
+  //       published: {
+  //         label: 'Published',
+  //         icon: <CheckCircleIcon color="var(--mui-palette-success-main)" weight="fill" />,
+  //       },
+  //     };
+  //     const { label, icon } = mapping[row.status] ?? { label: 'Unknown', icon: null };
 
-      return <Chip icon={icon} label={label} size="small" variant="outlined" />;
-    },
-    name: 'Status',
-    width: '150px',
-    align: 'left',
-  },
+  //     return <Chip icon={icon} label={label} size="small" variant="outlined" />;
+  //   },
+  //   name: 'Status',
+  //   width: '150px',
+  //   align: 'left',
+  // },
   {
     formatter: () => (
       <IconButton component={RouterLink} href={paths.dashboard.history.preview('1')}>

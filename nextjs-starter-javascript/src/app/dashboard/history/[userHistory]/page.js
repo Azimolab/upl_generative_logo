@@ -36,11 +36,11 @@ export default function Page() {
               variant="subtitle2"
             >
               <ArrowLeftIcon fontSize="var(--icon-fontSize-md)" />
-              Categorias
+              Historico
             </Link>
           </div>
           <div>
-            <Typography variant="h4">Editar Categorias</Typography>
+            <Typography variant="h4">Editar Historico</Typography>
           </div>
         </Stack>
         <HistoryEditForm

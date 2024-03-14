@@ -13,7 +13,7 @@ export default function Page() {
   return (
     <Stack spacing={4}>
       <div>
-        <Typography variant="h4">Security</Typography>
+        <Typography variant="h4">Segurança</Typography>
       </div>
       <Stack spacing={4}>
         <PasswordForm />
