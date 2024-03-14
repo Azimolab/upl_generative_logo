@@ -29,14 +29,14 @@ export const layoutConfig = {
           icon: 'users',
           items: [
             { key: 'customers', title: 'Lista de usuários', href: paths.dashboard.customers.list },
-            { key: 'customers:create', title: 'Criar usuário', href: paths.dashboard.customers.create },
+            // { key: 'customers:create', title: 'Criar usuário', href: paths.dashboard.customers.create },
             // { key: 'customers:details', title: 'Detalhes do usuário', href: paths.dashboard.customers.details('1') },
           ],
         },
         {
           key: 'products',
           title: 'Categorias',
-          icon: 'shopping-bag-open',
+          icon: 'list-dashes',
           items: [
             { key: 'products', title: 'Lista de categorias', href: paths.dashboard.products.list },
             { key: 'products:create', title: 'Criar categoria', href: paths.dashboard.products.create },

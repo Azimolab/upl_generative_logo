@@ -55,7 +55,7 @@ const columns = [
           <Link
             color="text.primary"
             component={RouterLink}
-            href={paths.dashboard.products.preview('1')}
+            href={paths.dashboard.history.preview('1')}
             sx={{ whiteSpace: 'nowrap' }}
             variant="subtitle2"
           >
@@ -99,7 +99,7 @@ const columns = [
   },
   {
     formatter: () => (
-      <IconButton component={RouterLink} href={paths.dashboard.products.preview('1')}>
+      <IconButton component={RouterLink} href={paths.dashboard.history.preview('1')}>
         <EyeIcon />
       </IconButton>
     ),
@@ -110,7 +110,7 @@ const columns = [
   },
 ];
 
-export function ProductsTable({ rows = [] }) {
+export function HistoryTable({ rows = [] }) {
   return (
     <React.Fragment>
       <DataTable columns={columns} rows={rows} />

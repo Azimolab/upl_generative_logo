@@ -59,7 +59,7 @@ const columns = [
       const mapping = {
         active: { label: 'Autorizado', icon: <CheckCircleIcon color="var(--mui-palette-success-main)" weight="fill" /> },
         // blocked: { label: 'Bloqueado', icon: <MinusIcon color="var(--mui-palette-error-main)" /> },
-        blocked: { label: 'Bloqueado', icon: <CancelIcon color="var(--mui-palette-error-main)" /> },
+        blocked: { label: 'Recusado', icon: <CancelIcon color="var(--mui-palette-error-main)" /> },
         pending: { label: 'Pendente', icon: <ClockIcon color="var(--mui-palette-warning-main)" weight="fill" /> },
       };
       const { label, icon } = mapping[row.status] ?? { label: 'Unknown', icon: null };

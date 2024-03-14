@@ -1,11 +1,11 @@
 import * as React from 'react';
 import Box from '@mui/material/Box';
-import Button from '@mui/material/Button';
+// import Button from '@mui/material/Button';
 import Card from '@mui/material/Card';
 import Divider from '@mui/material/Divider';
 import Stack from '@mui/material/Stack';
 import Typography from '@mui/material/Typography';
-import { Plus as PlusIcon } from '@phosphor-icons/react/dist/ssr/Plus';
+// import { Plus as PlusIcon } from '@phosphor-icons/react/dist/ssr/Plus';
 
 import { config } from '@/config';
 import { dayjs } from '@/lib/dayjs';
@@ -89,11 +89,11 @@ export default function Page({ searchParams }) {
           <Box sx={{ flex: '1 1 auto' }}>
             <Typography variant="h4">Usuários</Typography>
           </Box>
-          <Box sx={{ display: 'flex', justifyContent: 'flex-end' }}>
+          {/* <Box sx={{ display: 'flex', justifyContent: 'flex-end' }}>
             <Button startIcon={<PlusIcon />} variant="contained">
               Adicionar
             </Button>
-          </Box>
+          </Box> */}
         </Stack>
         <CustomersSelectionProvider customers={filteredCustomers}>
           <Card>

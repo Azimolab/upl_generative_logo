@@ -1,27 +1,27 @@
 import * as React from 'react';
-import RouterLink from 'next/link';
+// import RouterLink from 'next/link';
 import Box from '@mui/material/Box';
-import Button from '@mui/material/Button';
+// import Button from '@mui/material/Button';
 import Card from '@mui/material/Card';
 import Divider from '@mui/material/Divider';
 import Stack from '@mui/material/Stack';
 import Typography from '@mui/material/Typography';
-import { Plus as PlusIcon } from '@phosphor-icons/react/dist/ssr/Plus';
+// import { Plus as PlusIcon } from '@phosphor-icons/react/dist/ssr/Plus';
 
 import { config } from '@/config';
-import { paths } from '@/paths';
+// import { paths } from '@/paths';
 import { dayjs } from '@/lib/dayjs';
-import { ProductModal } from '@/components/dashboard/product/product-modal';
-// import { ProductsFilters } from '@/components/dashboard/product/products-filters';
-import { ProductsPagination } from '@/components/dashboard/product/products-pagination';
-import { ProductsTable } from '@/components/dashboard/product/products-table';
+import { HistoryModal } from '@/components/dashboard/history/history-modal';
+// import { ProductsFilters } from '@/components/dashboard/history/history-filters';
+import { HistoryPagination } from '@/components/dashboard/history/history-pagination';
+import { HistoryTable } from '@/components/dashboard/history/history-table';
 
-export const metadata = { title: `List | Products | Dashboard | ${config.site.name}` };
+export const metadata = { title: `List | History | Dashboard | ${config.site.name}` };
 
 const products = [
   {
     id: 'PRD-005',
-    name: 'Soja & Co. Eucalyptus',
+    name: 'Banan',
     image: '/assets/product-5.png',
     category: 'Skincare',
     type: 'physical',
@@ -105,31 +105,31 @@ export default function Page({ searchParams }) {
         <Stack spacing={4}>
           <Stack direction={{ xs: 'column', sm: 'row' }} spacing={3} sx={{ alignItems: 'flex-start' }}>
             <Box sx={{ flex: '1 1 auto' }}>
-              <Typography variant="h4">Products</Typography>
+              <Typography variant="h4">Histórico</Typography>
             </Box>
             <div>
-              <Button
+              {/* <Button
                 component={RouterLink}
                 href={paths.dashboard.products.create}
                 startIcon={<PlusIcon />}
                 variant="contained"
               >
                 Nova Categoria
-              </Button>
+              </Button> */}
             </div>
           </Stack>
           <Card>
             {/* <ProductsFilters filters={{ category, sku, status }} sortDir={sortDir} />
             <Divider /> */}
             <Box sx={{ overflowX: 'auto' }}>
-              <ProductsTable rows={filteredProducts} />
+              <HistoryTable rows={filteredProducts} />
             </Box>
             <Divider />
-            <ProductsPagination count={filteredProducts.length} page={0} />
+            <HistoryPagination count={filteredProducts.length} page={0} />
           </Card>
         </Stack>
       </Box>
-      <ProductModal open={Boolean(previewId)} />
+      <HistoryModal open={Boolean(previewId)} />
     </React.Fragment>
   );
 }
