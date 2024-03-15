@@ -10,6 +10,9 @@ let UserProvider;
 // eslint-disable-next-line import/no-mutable-exports -- Export based on config
 let UserContext;
 
+
+console.log("autenticação: ", config.auth.strategy);
+
 switch (config.auth.strategy) {
   case AuthStrategy.FIREBASE:
     UserContext = FirebaseUserContext;
