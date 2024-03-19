@@ -20,6 +20,7 @@ import { User as UserIcon } from '@phosphor-icons/react/dist/ssr/User';
 // import { Option } from '@/components/core/option';
 
 export function AccountDetails() {
+
   return (
     <Card>
       <CardHeader

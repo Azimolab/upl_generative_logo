@@ -11,15 +11,14 @@ let UserProvider;
 let UserContext;
 
 
-console.log("autenticação: ", config.auth.strategy);
-
 switch (config.auth.strategy) {
   case AuthStrategy.FIREBASE:
+    console.log("Autenticação bem sucedida");
     UserContext = FirebaseUserContext;
     UserProvider = FirebaseUserProvider;
     break;
   default:
-    throw new Error('Invalid auth strategy');
+    throw new Error('Estratégia de validação inválida.');
 }
 
 export { UserProvider, UserContext };

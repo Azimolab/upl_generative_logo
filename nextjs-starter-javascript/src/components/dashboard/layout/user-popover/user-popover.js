@@ -16,7 +16,8 @@ import { config } from '@/config';
 import { paths } from '@/paths';
 import { AuthStrategy } from '@/lib/auth/strategy';
 
-import { CustomSignOut } from './custom-sign-out';
+// import { CustomSignOut } from './custom-sign-out';
+import { FirebaseSignOut } from './firebase-sign-out';
 
 const user = {
   id: 'USR-000',
@@ -57,7 +58,7 @@ export function UserPopover({ anchorEl, onClose, open }) {
         </MenuItem>
       </List>
       <Divider />
-      <Box sx={{ p: 1 }}>{config.auth.strategy === AuthStrategy.CUSTOM ? <CustomSignOut /> : null}</Box>
+      <Box sx={{ p: 1 }}>{config.auth.strategy === AuthStrategy.FIREBASE ? <FirebaseSignOut /> : null}</Box>
     </Popover>
   );
 }

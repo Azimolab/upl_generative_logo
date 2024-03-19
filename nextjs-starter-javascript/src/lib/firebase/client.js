@@ -27,7 +27,6 @@ export function getFirebaseApp() {
     // messagingSenderId: config.firebase.messagingSenderId,
     // appId: config.firebase.appId,
   });
-  console.log('appInstance: ', appInstance.options.appId);
 
 
   return appInstance;
