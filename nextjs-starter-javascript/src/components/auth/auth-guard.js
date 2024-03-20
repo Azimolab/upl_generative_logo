@@ -30,7 +30,6 @@ export function AuthGuard({ children }) {
 
       switch (config.auth.strategy) {
         case AuthStrategy.FIREBASE: {
-          console.log("Aqui esta o Auth Guard")
           router.replace(paths.auth.firebase.signIn);
           return;
         }

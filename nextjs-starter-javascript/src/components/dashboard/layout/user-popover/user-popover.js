@@ -12,12 +12,17 @@ import Typography from '@mui/material/Typography';
 import { LockKey as LockKeyIcon } from '@phosphor-icons/react/dist/ssr/LockKey';
 import { User as UserIcon } from '@phosphor-icons/react/dist/ssr/User';
 
+
+
 import { config } from '@/config';
 import { paths } from '@/paths';
 import { AuthStrategy } from '@/lib/auth/strategy';
 
 // import { CustomSignOut } from './custom-sign-out';
 import { FirebaseSignOut } from './firebase-sign-out';
+
+
+
 
 const user = {
   id: 'USR-000',

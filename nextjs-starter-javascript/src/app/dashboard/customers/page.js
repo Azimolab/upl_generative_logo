@@ -14,6 +14,8 @@ import { CustomersPagination } from '@/components/dashboard/customer/customers-p
 import { CustomersSelectionProvider } from '@/components/dashboard/customer/customers-selection-context';
 import { CustomersTable } from '@/components/dashboard/customer/customers-table';
 
+import { db } from '@/lib/auth/firebase/client.js';
+
 export const metadata = { title: `List | Customers | Dashboard | ${config.site.name}` };
 
 const customers = [
@@ -74,6 +76,8 @@ export default function Page({ searchParams }) {
 
   const sortedCustomers = applySort(customers, sortDir);
   const filteredCustomers = applyFilters(sortedCustomers, { email, phone, status });
+
+  console.log(db);
 
   return (
     <Box

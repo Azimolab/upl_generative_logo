@@ -33,9 +33,13 @@ import { PropertyList } from '@/components/core/property-list';
 import { Payments } from '@/components/dashboard/customer/payments';
 // import { ShippingAddress } from '@/components/dashboard/customer/shipping-address';
 
+// import { useEffect, useState } from 'react';
+//  import {  } from '@';
+
 export const metadata = { title: `Details | Customers | Dashboard | ${config.site.name}` };
 
 export default function Page() {
+
   return (
     <Box
       sx={{
