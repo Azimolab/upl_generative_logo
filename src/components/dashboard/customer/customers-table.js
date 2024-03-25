@@ -2,7 +2,7 @@
 
 import * as React from 'react';
 import RouterLink from 'next/link';
-import Avatar from '@mui/material/Avatar';
+// import Avatar from '@mui/material/Avatar';
 import Box from '@mui/material/Box';
 import Chip from '@mui/material/Chip';
 import IconButton from '@mui/material/IconButton';
@@ -26,7 +26,7 @@ const columns = [
   {
     formatter: (row) => (
       <Stack direction="row" spacing={1} sx={{ alignItems: 'center' }}>
-        <Avatar src={row.avatar} />{' '}
+        {/* <Avatar src={row.avatar} />{' '} */}
         <div>
           <Link
             color="inherit"

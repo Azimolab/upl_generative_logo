@@ -1,13 +1,13 @@
 import * as React from 'react';
 import Avatar from '@mui/material/Avatar';
-import Box from '@mui/material/Box';
+// import Box from '@mui/material/Box';
 import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
 import Divider from '@mui/material/Divider';
 import Stack from '@mui/material/Stack';
 import Typography from '@mui/material/Typography';
-import { TrendDown as TrendDownIcon } from '@phosphor-icons/react/dist/ssr/TrendDown';
-import { TrendUp as TrendUpIcon } from '@phosphor-icons/react/dist/ssr/TrendUp';
+// import { TrendDown as TrendDownIcon } from '@phosphor-icons/react/dist/ssr/TrendDown';
+// import { TrendUp as TrendUpIcon } from '@phosphor-icons/react/dist/ssr/TrendUp';
 
 export function Summary({ amount, diff, icon: Icon, title, trend }) {
   return (
@@ -33,7 +33,7 @@ export function Summary({ amount, diff, icon: Icon, title, trend }) {
         </Stack>
       </CardContent>
       <Divider />
-      <Box sx={{ p: '16px' }}>
+      {/* <Box sx={{ p: '16px' }}>
         <Stack direction="row" spacing={1} sx={{ alignItems: 'center' }}>
           <Box
             sx={{
@@ -56,7 +56,7 @@ export function Summary({ amount, diff, icon: Icon, title, trend }) {
             {trend === 'up' ? 'increase' : 'decrease'} vs last month
           </Typography>
         </Stack>
-      </Box>
+      </Box> */}
     </Card>
   );
 }
