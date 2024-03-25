@@ -9,7 +9,8 @@ import Typography from '@mui/material/Typography';
 // import { TrendDown as TrendDownIcon } from '@phosphor-icons/react/dist/ssr/TrendDown';
 // import { TrendUp as TrendUpIcon } from '@phosphor-icons/react/dist/ssr/TrendUp';
 
-export function Summary({ amount, diff, icon: Icon, title, trend }) {
+// export function Summary({ amount, diff, icon: Icon, title, trend }) {
+export function Summary({ amount, icon: Icon, title }) {
   return (
     <Card>
       <CardContent>
